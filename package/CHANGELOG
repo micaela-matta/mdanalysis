@@ -35,13 +35,16 @@ Fixes
   * correctly read little-endian TRZ files on big-endian architectures (issue
     #1424)
   * Fixed type matching and inclusion compilation warnings for the
-  ENCORE analysis package (issue #1390)
+    ENCORE analysis package (issue #1390)
   * Fix extra deprecation warnings for instant segment and residue selectors
     (Issue #1476)
   * Accessing segments from a universe with an instant selector now issues a
     deprecation warning as expected (Issue #1478)
   * Fixed Angle.angle method return NaN values when angle was very close
     to 180 degrees (Issue #1556)
+  * Fixed analysis.rms.RMSD failure with select != "all" (Issue #1487)
+  * Fixed analysis.rms.RMSD: group RMSD calculation does not
+    superimpose groupselections anymore (issue #720)   
 
 Changes
   * remove deprecated TimeSeriesCollection
@@ -55,7 +58,7 @@ Changes
     writing (if available) or fall back to netcdf (see also Issue #506)
   * libmdaxdr classes now accept more argument types for a write (PR #1442)
   * libmdaxdr classes now raise EOFError when accessing another frame after
-  the end of the file. Used to raise IOError.
+    the end of the file. Used to raise IOError.
 
 
 mm/dd/17 richardjgowers, rathann, jbarnoud, orbeckst, utkbansal
